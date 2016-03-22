@@ -24,7 +24,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, how Ember "stops breaking the web".
 
 ```md
-<!-- your answer here -->
+Ember's router uses specific URL's to decide when to send and recieve data from
+the backend. Ember uses consistent URL structure throughout any given Ember page.
 ```
 
 ## Ember Routing
@@ -33,7 +34,10 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses four options to manage URLs being history, hash, auto, and none.
+History uses the HTML history api to produce URLs. The hash option loads the
+beginning state of the app and keeps it in a current state. This is what Ember
+uses to load current view-state.
 ```
 
 ## Deploying Ember
@@ -43,5 +47,6 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs separate the server side URL portion of the URL from the
+portion that Ember uses.
 ```
