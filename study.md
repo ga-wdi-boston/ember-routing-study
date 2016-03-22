@@ -24,7 +24,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, how Ember "stops breaking the web".
 
 ```md
-<!-- your answer here -->
+Ember stops breaking the web by giving users URLs and a working back button with every route the developer creates. Users can share, collaborate, bookmark, and form the URL. In addition the URL maps very well to the MVC.
 ```
 
 ## Ember Routing
@@ -33,7 +33,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+The Ember URL is matched by the route and the route connects to the appropriate model. Afterward the controller and template uses the model to render the the contents on the page. In addition, the router manages the URL with history, hash, auto, and none options.
 ```
 
 ## Deploying Ember
@@ -43,5 +43,6 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs are URLs that includes a hash. The hash
+allows users to navigate from page to page without requiring a page refresh. It uses the URL's anchor to load the starting state of your all and keep it in sync as users move around the app.
 ```
