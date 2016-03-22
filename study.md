@@ -25,6 +25,10 @@ In your own words, how Ember "stops breaking the web".
 
 ```md
 <!-- your answer here -->
+Embers router helps us to stop breaking the web.  With ember we get URLs and a working back button.  Ember allows you to
+stop putting your whole application under one URL.  Best practices are essentially built in.  Allows you to manage a large codebase with a many people being apart of
+the team.
+
 ```
 
 ## Ember Routing
@@ -34,6 +38,9 @@ responsible for which tasks?
 
 ```md
 <!-- your answer here -->
+4 basic parts to an Ember app.  Router/routes, model, service, componants
+  Ember uses the routing layer choose a model based on the URL.  Then a componant takes over for display and user
+  interaction.  A service (data store) may be used to retrieve models.
 ```
 
 ## Deploying Ember
@@ -44,4 +51,10 @@ instead of `hash` for `location`?
 
 ```md
 <!-- your answer here -->
+URLs link one piece of data to another. The hash option uses the URL's anchor to load the initial
+state of your app.  It will keep your site in sync as you move from view to view.  Your app uses the browser's history
+API to procduce URLs with the structure /something/something-else.  If history is not supported by the browser, the app
+will fall back to hash.  When deploying to git-hub pages you must be aware of the build process.  You must make sure you
+run ember build --enviroment production and build the project to dist/.
+
 ```
