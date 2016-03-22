@@ -24,7 +24,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, how Ember "stops breaking the web".
 
 ```md
-<!-- your answer here -->
+Ember preserves URL structure while maintaining seamless integration of SPA
 ```
 
 ## Ember Routing
@@ -43,5 +43,13 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs maintain a list of the user's "history" in the URL by loading the
+starting state of the app from the "anchoring" hash.
+
+When deploying to gh-pages, it's important to remember to build into the
+dist/ directory and copy the files located there, rather than pushing the
+whole ember app.
+
+In order to use the history API, you need to have your server configured to
+respond appropriately to the user navigating directly to different routes
 ```
