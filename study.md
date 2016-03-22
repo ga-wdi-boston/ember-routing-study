@@ -24,7 +24,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, how Ember "stops breaking the web".
 
 ```md
-<!-- your answer here -->
+Because Ember utilizes the MVC framework, using unique routes and URLs is inherently baked into the process of creating a web application using Ember.
 ```
 
 ## Ember Routing
@@ -33,7 +33,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses the URL to route to render a certain template. The route handler can control weather to load a template or a model that is then displayed through another template.
 ```
 
 ## Deploying Ember
@@ -43,5 +43,6 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs ensure that certain operations are executed when a specific URL is entered regardless of extra text that may be part of the HTTP request. Excess text is invisible to the server and is left up to the programmer and javascript syntax to ensure the desired task is completed correctly.
+When using the history API to produce URLs the route uses anchor based URLs, while the hash option can anchor the route with a hash to alow for the application to stay in sync when move around to another serve with different URLs. The has option needs to be set as the location in order for the application to correctly work while hosted on Github.
 ```
