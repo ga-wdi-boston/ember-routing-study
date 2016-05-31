@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Depending on how you configure it, Ember uses a combination of either the HTML5 Browser History API and/or hash (#) URLs to produce the correct URLs as a user navigates around the site.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,9 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Everything after the hash symbol (#) in a URL is ignored by the server and is not sent as part of the HTTP request. It can be used by front-end JavaScript, however.
+
+When deploying to GH-Pages, make sure embedded file paths are correctly formatted.
+
+To use the History API you must modify the config/environment.js file in your Ember app.
 ```
