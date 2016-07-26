@@ -21,7 +21,10 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+The ember router contains a Router.map function that contains the routes you
+want to be able to access with your app.  This map function determines which route to
+go to based on the url, which then if needed uses a model hook to retrieve data, and
+then passes that data to the template when it is resolved.
 ```
 
 ## Deploying Ember
@@ -31,5 +34,15 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+A hash URL uses the anchor of the URL (everything before the hash) to load the
+initial state of the application, and then uses everything after the hash to
+determine the state.
+
+When building to github pages, its important to never prefix local resource paths
+with a backslash.
+
+When using the history API, you have to serve the entire ember app from all the
+URL's in your map function, so that the application does not break if the user
+navigates directly to a specific state.
+
 ```
