@@ -21,7 +21,11 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+The router, taking over from the browers on a url navigation, describes a list
+of routes that are appended to the root url (example: www.something.com/ + route).
+The model for that route then takes over and returns promises. These promises
+resolve as the return value for the model in the controller, which then can be
+rendered in the DOM by the controller.
 ```
 
 ## Deploying Ember
@@ -31,5 +35,11 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash urls use a hash after the root url as an anchor for any view-state urls you
+may wish to append to it. Being aware of ENV.locationType is important for github
+pages deployment, for if you want to use the history API, you have to set
+ENV.locationType's value to 'history'. Setting it to 'hash' keeps using hash urls,
+while a value of none prevents any url manipulation. Plus, using the history API
+requires a user to be able to navigate from the page they land at, even if it isn't
+the root (You have to account for this in your Ember app's router).
 ```
