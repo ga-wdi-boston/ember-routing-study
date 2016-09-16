@@ -21,7 +21,9 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+When the URL change, the ember router will render a template or redirect to a new route.
+
+router => route; route.js => model; template => view
 ```
 
 ## Deploying Ember
@@ -31,5 +33,14 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+hash URL include the route /#, it will load the app to starting state.
+
+when deploy a ember app, those things should be prepared:
+1 image data should be referenced with a relative path;
+2 config/environment.js should contains ENV.baseURL and ENV.locationType;
+3 build the project to dist/;
+
+If using history url, you need to set up the server to make sure it will response the request, like in Rudy, you can set the route in routes.rb.
+
+http://discuss.emberjs.com/t/location-history-feature-and-unbookmarkable-route-urls/1248
 ```
