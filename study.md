@@ -22,6 +22,17 @@ responsible for which tasks?
 
 ```md
 The router is responsible for loading the correct model, which will load the view state and the template will change the UI.
+
+The router figures out what the user is looking at, and if they select something, the router maps the current URL to a route handler that will perform the correct action.
+
+The router can load a model, which represents the underlying data that is shown to the user. The models can store the data to a database if the user leaves the page, or it can even store to the user's own database.  The data is stored as JSON.
+
+Templates are used as the user interface.
+
+Components consist of templates whose purpose is to be reused in multiple view states to eliminate repetitition in the other model-specific templates.
+
+Controllers behave like components.
+
 ```
 
 ## Deploying Ember
