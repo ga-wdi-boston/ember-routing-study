@@ -37,5 +37,18 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+A hash URL is the optional second half of a URL that comes after the '#' symbol.
+This portion of the URL is not sent to the server and is used only for local
+navigation.
+
+When using GitHub Pages to deploy an Ember app, it is important to:
+-  reference image paths differently from CSS vs templates
+-  set `ENV.locationType` in `config/environment.js` to `'hash'`
+-  build the project to `dist/`
+-  copy `dist/` to the root, `git add` relevant files, commit and push
+
+To use the `history` API instead of `hash` for `location`, `ENV.locationType`
+must be set to `history`. Alternately, you can use `auto` (which is the default)
+configuration. `auto` will use `history` if the browser supports it, and `hash`
+if not.
 ```
