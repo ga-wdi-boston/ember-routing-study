@@ -21,7 +21,13 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+The routing layer (router) maps URLs to routes. The router passes any relevant
+params to the route handler for that route. The route handlers includes a method
+called the model hook, which is fired (with params as an argument if necessary)
+to retrieve the correct model from the data layer. The retrieved model is passed
+to that route's template, which uses data from the model, along with any
+necessary components, to render content for the UI. The content that is
+subsequently displayed in the UI is considered the 'view-state' for that URL.
 ```
 
 ## Deploying Ember
