@@ -21,7 +21,8 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses the browser history API for the URL. Each different URL is tied to a different
+view state.
 ```
 
 ## Deploying Ember
@@ -31,5 +32,11 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+The hash option uses the URL's anchor to load the starting state of your application and will keep it in sync as you move around.
+If you are using a hash based URL it needs to be noted in config/environment.js.
+if (environment === 'production') {
+  ENV.baseURL = '/project-name';
+  ENV.locationType = 'hash';
+}
+
 ```
