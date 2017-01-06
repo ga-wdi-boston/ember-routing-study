@@ -21,7 +21,9 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses the URL to load the view state by properly routing an URL request
+to the right router. During the process model hooks are then invoked by the
+route handler and data is passed to the template, making it available for display.
 ```
 
 ## Deploying Ember
@@ -31,5 +33,7 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs that contain a hash # in them, such as www.me.com/#/heybuddy. To use
+history instead you need to configure your server such that all defined URLs are
+handled, even if the client navigates there directly.
 ```
