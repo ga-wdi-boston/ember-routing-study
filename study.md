@@ -21,7 +21,13 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+It uses a Hashbang. I am having trouble undestanding what hashbang actually
+does. I need to see it in action to undestand what happens.
+
+History: the browser produces URLs using it's history API.
+Hash: the anchor of the URL loads your application's starting state.
+None: URL doesn't have any effect on the app.
+
 ```
 
 ## Deploying Ember
@@ -31,5 +37,9 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+- Hash URLs are how you access some data that you haven’t written specific url paths to.
+However, I do not understand what that means and need to see it in action to
+understand this.
+- When using GitHub pages, keep an eye out for your image paths.
+- Having trouble understanding how history and hashes work and their purpose..
 ```
