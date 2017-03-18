@@ -21,7 +21,10 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+History- it uses HTML5 History API
+Hash which uses an anchor based URL
+Auto which can use either
+and None which is set by design
 ```
 
 ## Deploying Ember
@@ -31,5 +34,7 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+don't start with / because this will go back to the root and not just to the path you want the object
+to be found.
+for the history API you need to use pushState with the state object, title and URL
 ```
