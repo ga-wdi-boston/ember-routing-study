@@ -21,7 +21,11 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember apps parse the URL for the path and basically all the data that follows
+the domain, and uses that to determine which controller and model to use.
+
+Ember can use URLs that have dynamic segments, which allow the same template
+to be used with multiple different models.
 ```
 
 ## Deploying Ember
@@ -31,5 +35,13 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+From what I understand, a hash URL is a way that the front end keeps track of
+where the user is on the page at any given moment.  The server is responsible
+for loading the page at the base URL, and movements and view-state changes
+happen on the front-end, rather than being loaded from the back-end.
+
+If using `history` the back-end must be prepared to serve the website even
+if the user directly navigates to a specific path in the site.  The example
+given was that `url/posts/new` must serve the site the same way that just `url`
+would.
 ```
