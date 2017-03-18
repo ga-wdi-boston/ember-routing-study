@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+<!--It uses the components in the url to determine the navagation path. So from the reading if we wanted to go to posts.new the mapping in the url would have /posts/new after the main address. It also at first will load the base site and will adjust data values depending on where you have navagted to or what you have changed on the site. So instead of reloading the page with a new view it keeps the main part loaded while switching the view-state. At least again thats how I read it, I don't think I am grasping the whole topic though. -->
 ```
 
 ## Deploying Ember
@@ -31,5 +31,5 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+<!-- Hash urls are a way to anchor other parts of your content to the main URL without configuring a specific navagation to that part of your content. All your paths have to be mapped out if you're going to deploy with history instead of using hash or auto. Github needs the paths to also be set up to connect the paths from the front end the back end either way. That can be accomplished both manually or automaticly using what git hub has provided for deploying ember applications.  -->
 ```
