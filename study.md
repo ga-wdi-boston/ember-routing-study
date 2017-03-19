@@ -21,7 +21,9 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses history for producing urls with a posts/new structure (which will go to posts.new)
+for loading the startng state of a web application, Ember uses hash which relys on hashchange event listeners in the browser (/#/posts/new goes to posts.new)
+for no interaction with the browsers url, the location API can be disabled by setting ENV.locationtype to none(useful for testing)
 ```
 
 ## Deploying Ember
@@ -31,5 +33,8 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+hash urls rely on hashchange events existing in the browser
+can use hash, history, none
+to rely on hash, or history, you can change the ENV.locationtype
+
 ```
