@@ -21,7 +21,9 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+the hash can detemine the view-state.
+The router with a hash preceding it like /#/routeName will make a new route. The history
+part is for the browsers history and the hash is for a certain part in the application
 ```
 
 ## Deploying Ember
@@ -31,5 +33,10 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+I think it takes you to certain part of a route, like a certain part on a page.
+When deploying make sure not to precede routes with a slash "/" for css, as ember will see it as
+an absolute path, and to look at the app name base url to make sure it DOES precede with a slash. Also in deployment
+make sure to look that locationType has 'hash' for a value. In order to change API to history, you would change
+'location' s value to 'history' from 'hash'
+http://emberjs.com/api/classes/Ember.Location.html
 ```
