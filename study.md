@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses the URL to load the view state by parsing the information it contains through the Router. The Router has a model hook defined for each allowed url which calls the model to render the appropriate content, with variations depending on whether or not parameters were passed.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,5 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Has URLs are URLs of the format `www.example.com/#/posts` as opposed to `www.example.com/posts`. They are anchored to the root of the document and basically rely on browser javascript events to update the page. When deploying to github pages, it is important to properly set a number of setting that relate to URLs to make sure they are correctly configured. To use the location API you need to be using HTML5 since it is a featured introduced in that version.
 ```
