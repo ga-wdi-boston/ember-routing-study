@@ -21,7 +21,14 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+
+A route often includes a model hook, which pulls in the necessary data for a
+view-state. Ember loads that data and passes it to the template by way of the
+controller. Routes can have "dynamic segments" (parameters, query strings)
+that reference, for example, specific data ids or search terms. Ember parses
+these segments and makes them available to the model hook within the route so
+that the appropriate data can be loaded.
+
 ```
 
 ## Deploying Ember
@@ -31,5 +38,20 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+
+Hashbang URLs (domain.com/#!/content) don't send anything after the hash as
+part of the HTTP request.
+
+Using the `history` API requires that your server serve your Ember app from
+each URL in the router.js file. (It sounds like this isn't possible with GH
+Pages?)
+
+Hash URLs (ember.app/#/content) rely on the `hashchange` event in the browser
+(which is widely supported), but Dan Webb argues that this approach is bad—it
+subverts HTTP status codes (which are good! and useful!) and means that
+JavaScript is responsible for displaying errors, redirecting, etc.
+
+GitHub pages requires that you set `ENV.locationType` to `hash` so that it can
+properly handle all of the app's assets (images, etc.).
+
 ```
