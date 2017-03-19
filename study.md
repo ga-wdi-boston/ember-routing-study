@@ -21,7 +21,11 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+<!--
+A template file.hbs is created to write content that will be rendered.
+The router manages the application state
+the router map is used to add the endpoint created in the hbs file  and the path linked to that template.
+the router updates the url -->
 ```
 
 ## Deploying Ember
@@ -31,5 +35,9 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+<!-- hash urls are fragments of the url and this disallows search engine optimization
+
+Have the right info in the config file
+
+Server must serve the Ember app from URLs defined in the router.map = Configure server. -->
 ```
