@@ -21,8 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
-```
+The router passes the url any called view state, whuch is determined by the router.  The model that was retrieved then passes data into the template and displays it on the front end.```
 
 ## Deploying Ember
 
@@ -31,5 +30,4 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
-```
+A hash is what's known as a fragment identifier, which SPA's use to directly access content. It looks like you need te reference css with a file path.  You would use the history attributes of Ember (router.map)(Can you also use the go() method for using the history of a hash?).```
