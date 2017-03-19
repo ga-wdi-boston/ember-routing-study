@@ -21,8 +21,8 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
-```
+ember use the router to get the path for the content and send it to the model
+which define the specified the url path ```
 
 ## Deploying Ember
 
@@ -31,5 +31,11 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+The hash option uses the URL's anchor to load the starting state of your application
+and will keep it in sync as you move around. At present,
+this relies on a hashchange event existing in the browser.
+
+https://guides.emberjs.com/v2.11.0/configuring-ember/specifying-url-type/
+
+* also i read it couple of time and i wasnt sure if i understood it.
 ```
