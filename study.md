@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Part of the URL is extracted by ember and sent to the model as an arugment.  This argument is data sent to the model to determine which view-state to load.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,5 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs have data after a hash (#) that does not get sent in the web request, but is still accessable by javascript.  When deploying on github pages, it is important to not prefix the path with a `/`.
 ```
