@@ -21,7 +21,10 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+A template displays data from a model through a router. The router has a route
+defined which accesses a particular data set from the model. The model returns a
+Ember Data record and possibly a promise object and a plain javascript object or
+array before rendering the template with the requested data.
 ```
 
 ## Deploying Ember
@@ -31,5 +34,17 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs are an optional part of the URL that is after the # and identifies
+a portion of that document. When using GitHub pages to deploy the Ember app
+URL paths should not be prefixed with a / and images in CSS files should be
+formatted like url('images/foo.png') and in templates should be formatted like
+assets/images/foo.pn. Also config.js needs to include:
+
+if (environment === 'production') {
+  ENV.baseURL = '/project-name';
+  ENV.locationType = 'hash';
+}
+
+If one wants to use the history API instead of the hash for location one would
+need to change the ENV.locationType to `history`.
 ```
