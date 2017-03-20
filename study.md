@@ -21,7 +21,8 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Router layer will analyze the path to know where to get the data. Template is displaying
+the retrieved data.
 ```
 
 ## Deploying Ember
@@ -31,5 +32,6 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLS is the part of URL after '#'. Before deploying Ember app, we need to build the
+project to dist/. The server must be able to serve all the URLS in Ember app. 
 ```
