@@ -21,7 +21,8 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Router is responsbile for adressing the specific route that user is interecting
+and model is responsible for reaching the model property of the controller.
 ```
 
 ## Deploying Ember
@@ -31,5 +32,7 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+I am not complately sure even thoug I have read the documentation couple of times.
+What I have understood from it is hashes are a way link our app into certain
+url.
 ```
