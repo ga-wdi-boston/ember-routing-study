@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember loads the model thru the url and depending on the template shows different veiws that corrospond with them.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,7 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash urls are when a veiw is changed on the front end instead of rendering a new veiw from the server.
+
+Not exactly sure on how to answer the other 2 questions.
 ```
