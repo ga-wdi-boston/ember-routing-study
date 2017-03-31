@@ -21,7 +21,16 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+The view-states are are simply templates which may or may not display data from a model.
+It's the URL (or routes) job to load the appropriate model.
+
+https://www.aeturnum.com/warming-up-ember-js-2/
+
+Ember is comprised of 3 main layers: the controller layer, the view layer, and
+the model layer.
+The controller layer is built with a combination of routes and controllers.
+The view layer is built with a layer of templates and views.  It's responsible for user events, and updating the DOM structure when the data of the view changes.
+The model layer is built with a combination of model and ember data.responsible for any server side communication and data formatting.
 ```
 
 ## Deploying Ember
@@ -31,5 +40,7 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+I'm having a great difficulty in finding any other sources on these quetions.  The sources
+provided aren't really clicking. I'm confused about the use cases for each URL type, especially
+the `hash` url.  
 ```
