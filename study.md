@@ -18,10 +18,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 ## Ember Routing
 
 How does Ember use the URL to load view-state? Which layers in Ember are
-responsible for which tasks?
+esponsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Each section of the url seperated by '/' is a view-state.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,10 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+A hash url will keep the starting state of your application synced as you move
+around.
+
+Copy the app build into the root of the repository with cp -R dist/* ./
+
+Do not prefix the path with /
 ```
