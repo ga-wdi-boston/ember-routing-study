@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+Ember uses route handles to load view-states based on URL's.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,5 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash URLs can only be accessed from within the application thus creating "siloed" data. If you want to use the 'history' API for gh-pages deployment, your server must be configured to serve Ember from all URL endpoints.
 ```
