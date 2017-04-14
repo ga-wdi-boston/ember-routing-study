@@ -21,7 +21,7 @@ How does Ember use the URL to load view-state? Which layers in Ember are
 responsible for which tasks?
 
 ```md
-<!-- your answer here -->
+The router calls up a route in the app/routes folder. In the specified app/routes/file.js file, a model and action are specified and the model property of the controller is set to the model. The controller's model property can then be accessed by the template for rendering.
 ```
 
 ## Deploying Ember
@@ -31,5 +31,14 @@ your deployed Ember app? What do you need if you want to use the `history` API
 instead of `hash` for `location`?
 
 ```md
-<!-- your answer here -->
+Hash urls are urls that include a hash (#). Content before the hash is the location
+of the document and content after the hash generally references something inside the
+document. The content to the left of the hash is loaded by the browser, but the
+content to the right is searched for by the browser after content load.
+
+What to be aware of? You need to set up the config/environment.js with a baseURL and make sure to not prefix paths with / since those refer to the full path on the HTTP server and not the path relative to the specified baseURL.
+
+To use the history API instead of hash: configure the application to serve the
+entire Ember application to all routes and set the option to history in
+config/environment.js under ENV.locationType
 ```
